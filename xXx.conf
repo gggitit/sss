@@ -1,0 +1,78 @@
+[General]
+bypass-system = true
+skip-proxy = 127.0.0.1,192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,100.64.0.0/10,localhost,*.local,passenger.t3go.cn,passenger.t3go.cn
+bypass-tun = 10.0.0.0/8,100.64.0.0/10,127.0.0.0/8,169.254.0.0/16,172.16.0.0/12,192.0.0.0/24,192.0.2.0/24,192.88.99.0/24,192.168.0.0/16,198.18.0.0/15,198.51.100.0/24,203.0.113.0/24,224.0.0.0/4,255.255.255.255/32
+dns-server = 119.29.29.29, 223.5.5.5, system
+doh-server = https://cdn-doh.ssnm.xyz/dns-query
+ipv6 = false
+
+
+[Rule]
+DOMAIN-SUFFIX,dingdian6.com,DIRECT
+DOMAIN-SUFFIX,zerifeisheng.com,DIRECT
+DOMAIN-SUFFIX,icloud.com,DIRECT
+DOMAIN-SUFFIX,apple.com,DIRECT
+DOMAIN-SUFFIX,aixdzs.com,DIRECT
+DOMAIN-SUFFIX,thewind.xyz,DIRECT
+DOMAIN-SUFFIX,ddrk.me,DIRECT
+DOMAIN-SUFFIX,limbopro.com,DIRECT
+DOMAIN-SUFFIX,match.qq.com,DIRECT
+DOMAIN-SUFFIX,jmcomic.mobi,DIRECT
+DOMAIN-SUFFIX,jmcomic1.mobi,DIRECT
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Advertising/Advertising.list,REJECT
+DOMAIN-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Advertising/Advertising_Domain.list,REJECT
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Hijacking/Hijacking.list,REJECT
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Privacy/Privacy.list,REJECT
+DOMAIN-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Privacy/Privacy_Domain.list,REJECT
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/release/rule/Loon/Proxy/Proxy.list,PROXY
+#DOMAIN-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Proxy/Proxy_Domain.list,PROXY
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/China/China.list,DIRECT
+GEOIP,CN,DIRECT
+FINAL,PROXY
+
+[Host]
+*testflight.apple.com = server:8.8.4.4
+*.qq.com = server:119.28.28.28
+*.tencent.com = server:119.28.28.28
+*.weixin.com = server:119.28.28.28
+*.bilibili.com = server:119.29.29.29
+hdslb.com = server:119.29.29.29
+*.163.com = server:119.29.29.29
+*.126.com = server:119.29.29.29
+*.126.net = server:119.29.29.29
+*.127.net = server:119.29.29.29
+*.netease.com = server:119.29.29.29
+*.mi.com = server:119.29.29.29
+*.xiaomi.com = server:119.29.29.29
+*.pcbeta.com = 120.52.19.113
+mtalk.google.com = 108.177.125.188
+dl.google.com = server:119.29.29.29
+dl.l.google.com = server:119.29.29.29
+
+[URL Rewrite]
+^https?://(www.)?g.cn https://www.google.com 302
+^https?://(www.)?google.cn https://www.google.com 302
+(?<=_region=)CN(?=&) KR 307
+(?<=&mcc_mnc=)4 2 307
+^(https?:\/\/(tnc|dm)[\w-]+\.\w+\.com\/.+)(\?)(.+) $1$3 302
+(^https?:\/\/*\.\w{4}okv.com\/.+&.+)(\d{2}\.3\.\d)(.+) $118.0$3 302
+
+[Script]
+#147xs = type=http-response,pattern="^https?:\/\/(\w{0,3}(\.){0,1}(147xs)(\.)\w{0,3})(?!.*?(/(cdn-cgi|onclick)))(?!.*?(\.(css|js|jpeg|jpg|png|php|gif|ico|mp3|mp4|svg|tff|PNG|woff|woff2|m3u8))).*",requires-body=true,script-path=https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/Adguard/Adblock4limbo.js
+#知道搜索广告(baidu) = type=http-response,pattern="^https?:\/\/(zhidao)\.baidu\.com\/(question|index|\?fr|\?word)",requires-body=true,script-path=https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/Adguard/surge_baidu.zhidao.js
+#搜索首页广告(baidu) = type=http-response,pattern="^https?:\/\/(www|m)\.baidu\.com(/|\/\?ref.*)$",requires-body=true,script-path=https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/Adguard/surge_baidu.index.js
+#搜索结果广告(baidu) = type=http-response,pattern="^https?:\/\/(www|m)\.baidu\.com(\/s\?word.*|\/from.*?\/s\?word.*|\/from.*?word=.*)",requires-body=true,script-path=https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/Adguard/surge_baidu.js
+内容农场(google) = type=http-response,pattern="^https?:\/\/(www\.google)(\.\w{2,4}){1,2}\/search\?(?!.*?(apps=)).*",requires-body=true,script-path=https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/Adguard/Adblock4limbo.js
+#禁漫天堂(jmcomic.mobi) = type=http-response,pattern="^https?:\/\/(\w{0,3}(\.){0,1}(jmcomic)(\.)\w{0,4})(?!.*?(/(cdn-cgi|onclick)))(?!.*?(\.(css|js|jpeg|jpg|png|php|gif|ico|mp3|mp4|svg|tff|PNG|woff|woff2|m3u8))).*",requires-body=true,script-path=https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/Adguard/Adblock4limbo.js
+#禁漫天堂(jmcomic1.mobi) = type=http-response,pattern="^https?:\/\/(\w{0,3}(\.){0,1}(jmcomic1)(\.)\w{0,4})(?!.*?(/(cdn-cgi|onclick)))(?!.*?(\.(css|js|jpeg|jpg|png|php|gif|ico|mp3|mp4|svg|tff|PNG|woff|woff2|m3u8))).*",requires-body=true,script-path=https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/Adguard/Adblock4limbo.js
+禁漫天堂(18comic.org|vip) = type=http-response,pattern="^https?:\/\/(\w{0,3}(\.){0,1}(18comic)(\.)\w{0,3})(?!.*?(/(cdn-cgi|onclick)))(?!.*?(\.(css|js|jpeg|jpg|png|php|gif|ico|mp3|mp4|svg|tff|PNG|woff|woff2|m3u8))).*",requires-body=true,script-path=https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/Adguard/Adblock4limbo.js
+紳士漫畫(www.wnacg.com) = type=http-response,pattern="^https?:\/\/(\w{0,3}(\.){0,1}(wnacg)(\.)\w{0,3})(?!.*?(/(cdn-cgi|onclick)))(?!.*?(\.(css|js|jpeg|jpg|png|php|gif|ico|mp3|mp4|svg|tff|PNG|woff|woff2|m3u8))).*",requires-body=true,script-path=https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/Adguard/Adblock4limbo.js
+低端影视(ddrk.me) = type=http-response,pattern="^https?:\/\/(\w{0,3}(\.){0,1}(ddrk)(\.)\w{0,3})(?!.*?(\.webmanifest|/(cdn-cgi)))(?!.*?(\.(css|js|jpeg|jpg|png|php|gif|ico|mp3|mp4|svg|tff|PNG|woff|woff2|m3u8|ddr))).*",requires-body=true,script-path=https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/Adguard/Adblock4limbo.js
+avple.tv = type=http-response,pattern="^https?:\/\/(\w{0,3}(\.){0,1}(avple)(\.)\w{0,3})(?!.*?(/(cdn-cgi)))(?!.*?(\.(css|js|jpeg|jpg|png|php|gif|ico|mp3|mp4|svg|tff|PNG|woff|woff2|m3u8))).*",requires-body=true,script-path=https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/Adguard/surge_avple.js
+jable.tv = type=http-response,pattern="^https?:\/\/(\w{0,3}(\.){0,1}(jable)(\.)\w{0,3})(?!.*?(/(cdn-cgi)))(?!.*?(\.(css|js|jpeg|jpg|png|php|gif|ico|mp3|mp4|svg|tff|PNG|woff|woff2|m3u8))).*",requires-body=true,script-path=https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/Adguard/Adblock4limbo.js
+
+[MITM]
+ca-passphrase = Shadowrocket
+ca-p12 = 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
+enable = true
+hostname = *.tiktokv.com,*.byteoversea.com,*.tik-tokapi.com,www.google.com,www.google.com.hk,18comic.vip,18comic.org,jmcomic.mobi,jmcomic1.mobi,wnacg.com,ddrk.me,jable.tv,avple.tv,www.baidu.com,m.baidu.com,zhidao.baidu.com
