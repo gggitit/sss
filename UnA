@@ -1,0 +1,8 @@
+[Script]
+# 全能扫描王 Pro
+http-response https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\? url script-response-body https://raw.githubusercontent.com/chiupam/surge/main/scripts/unblock/CamScanner_Pro.js, requires-body=true, timeout=10, tag=全能扫描王 Pro
+# WPS SVIP
+http-response https?:\/\/account\.wps\.cn\/api\/users url script-response-body https://raw.githubusercontent.com/chiupam/surge/main/scripts/unblock/WPS_SVIP.js,requires-body=true, requires-body=true, timeout=10, tag=WPS SVIP
+
+[MITM]
+hostname = ap*.intsig.net, account.wps.cn
