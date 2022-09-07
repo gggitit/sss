@@ -1,4 +1,4 @@
-div.col-xs-6{display:none!important}
+div[class="col-xs-6"]{display:none!important}
 div[style*="margin: 5px"]{display:none!important}
 div.pull-right{display:none!important}
 div[style^="display: flex"]{display:none!important}
@@ -16,4 +16,3 @@ div.owl-carousel.partial-view.owl-loaded.owl-drag{display:none!important}
 div.modal-dialog.billboard-modal8888{display:none!important}
 div.modal-backdrop.fade.in{display:none!important}
 a[target="_blank"]{display:none!important}
-
