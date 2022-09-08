@@ -1,1 +1,1 @@
-div[style$="margin: 5px"]{display:none!important}
+div[style*="margin: 5px"]{display:none!important}
