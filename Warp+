@@ -1,5 +1,5 @@
 {
-    "interface_name": "WARP",
+    "interface_name": "Warp+",
     "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:8f0a:fcdb:db2f:3b3:4d49/128"
