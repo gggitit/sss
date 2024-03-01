@@ -24,7 +24,7 @@ proxies:
   - {name: "☁️ CFWarp-B",type: wireguard,server: 162.159.192.247,port: 1010,ip: 172.16.0.2,private-key: 4Oz80bIljm6+3stx5SkEeGpDVY+Z/nMj+CK1APOKdVE=,public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=,remote-dns-resolve: false,udp: true}
   - {name: "☁️ CFWarp-C",type: wireguard,server: 188.114.99.28,port: 854,ip: 172.16.0.2,private-key: 4Oz80bIljm6+3stx5SkEeGpDVY+Z/nMj+CK1APOKdVE=,public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=,remote-dns-resolve: false,udp: true}
   - {name: "☁️ CFWarp-D",type: wireguard,server: 188.114.96.140,port: 1010,ip: 172.16.0.2,private-key: SHVqHEGI7k2+OQ/oWMmWY2EQObbRQjRBdDPimh0h1WY=,public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=,remote-dns-resolve: false,udp: true}
-  - {name: "☁️ CFWarp-E",type: wireguard,server: 162.159.195.8,port: 2408,ip: 172.16.0.2,ipv6: 2606:4700:110:8f0a:fcdb:db2f:3b3:4d49,private-key: GAl2z55U2UzNU5FG+LW3kowK+BA/WGMi1dWYwx20pWk=,public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=,remote-dns-resolve: false,udp: true}
+  - {name: "☁️ CFWarp-E",type: wireguard,server: 162.159.195.8,port: 2408,ip: 172.16.0.2,ipv6: 2606:4700:110:8f0a:fcdb:db2f:3b3:4d49,private-key: SHVqHEGI7k2+OQ/oWMmWY2EQObbRQjRBdDPimh0h1WY=,public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=,remote-dns-resolve: false,udp: true}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -38,7 +38,7 @@ proxy-groups:
       - DIRECT
   - name: ♻️ 自动选择
     type: url-test
-    url: http://www.gstatic.com/generate_204
+    url: http://cp.cloudflare.com/generate_204
     interval: 3600
     tolerance: 200
     proxies:
