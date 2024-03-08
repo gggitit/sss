@@ -957,7 +957,7 @@
       {
        "tag": "geosite-wechat",
        "type": "remote",
-       "format": "binary",
+       "format": "source",
        "url": "https://raw.githubusercontent.com/Toperlock/sing-box-geosite/main/wechat.json",
        "download_detour": "direct"
       },
