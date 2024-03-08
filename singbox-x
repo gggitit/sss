@@ -394,8 +394,8 @@
       "tag": "block"
     },
     {
-      "type": "vless",
       "tag": "sing-box-reality",
+      "type": "vless",
       "uuid": "8cbea043-fefc-4182-ba9e-fac5d23785d5",
       "flow": "",
       "packet_encoding": "",
