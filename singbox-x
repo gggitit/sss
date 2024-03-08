@@ -403,6 +403,7 @@
       "server_port": 44332,
       "tls": {
         "enabled": true,
+        "insecure": true,
         "server_name": "cf-bq5.pages.dev",
         "utls": {
           "enabled": true,
