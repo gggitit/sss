@@ -410,8 +410,8 @@
         },
         "reality": {
           "enabled": true,
-          "public_key": "$public_key",
-          "short_id": "$short_id"
+          "public_key": "PBRc2v9SSXpG4jjQRYNa-kgs8w9V4U3MNLuncd2d0hw",
+          "short_id": "6ba85179e30d4fc2"
         }
       }
     },
