@@ -19,7 +19,7 @@
     "servers": [
       {
         "tag": "proxyDns",
-        "address": "tls://1.1.1.1",
+        "address": "tls:1.1.1.1",
         "detour": "proxy"
       },
       {
@@ -103,7 +103,7 @@
         "auto",
         "direct",
         "WARP+",
-        "sing-box-reality",
+        "sing-box-vless",
         "🇹🇼 Taiwan_hy_6",
         "🇫🇷 France_hy2_7",
         "🇺🇸 United States_vless_8",
@@ -327,7 +327,7 @@
       "type": "selector",
       "outbounds": [
         "WARP+",
-        "sing-box-reality",
+        "sing-box-vless",
         "🇫🇷 France_hy2_7",
         "🇫🇷 France_hysteria_0",
         "🇫🇷 France_hysteria2_0",
@@ -360,7 +360,7 @@
       "type": "urltest",
       "outbounds": [
         "WARP+",
-        "sing-box-reality",
+        "sing-box-vless",
         "🇹🇼 Taiwan_hy_6",
         "🇫🇷 France_hy2_7",
         "🇺🇸 United States_vless_8",
@@ -394,7 +394,7 @@
       "tag": "block"
     },
     {
-      "tag": "sing-box-reality",
+      "tag": "sing-box-vless",
       "type": "vless",
       "uuid": "8cbea043-fefc-4182-ba9e-fac5d23785d5",
       "flow": "",
@@ -407,14 +407,15 @@
         "server_name": "cf-bq5.pages.dev",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "PBRc2v9SSXpG4jjQRYNa-kgs8w9V4U3MNLuncd2d0hw",
-          "short_id": "6ba85179e30d4fc2"
+          "fingerprint": "random"
+          } 
+        }, 
+         "transport": {
+            "headers": {
+                 "Host": "cf-bq5.pages.dev"
+                 }, 
+                "type": "ws"
         }
-      }
     },
     {
       "tag": "WARP+",
