@@ -759,6 +759,10 @@
         "outbound": "🎬 MediaVideo"
       },
       {
+        "rule_set": "geosite-wechat",
+        "outbound": "direct"
+      },
+      {
         "rule_set": [
           "geosite-tiktok",
           "geosite-netflix",
