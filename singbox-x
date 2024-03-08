@@ -103,6 +103,7 @@
         "auto",
         "direct",
         "WARP+",
+        "sing-box-reality",
         "🇹🇼 Taiwan_hy_6",
         "🇫🇷 France_hy2_7",
         "🇺🇸 United States_vless_8",
@@ -326,6 +327,7 @@
       "type": "selector",
       "outbounds": [
         "WARP+",
+        "sing-box-reality",
         "🇫🇷 France_hy2_7",
         "🇫🇷 France_hysteria_0",
         "🇫🇷 France_hysteria2_0",
@@ -358,6 +360,7 @@
       "type": "urltest",
       "outbounds": [
         "WARP+",
+        "sing-box-reality",
         "🇹🇼 Taiwan_hy_6",
         "🇫🇷 France_hy2_7",
         "🇺🇸 United States_vless_8",
@@ -389,6 +392,28 @@
     {
       "type": "block",
       "tag": "block"
+    },
+    {
+      "type": "vless",
+      "tag": "sing-box-reality",
+      "uuid": "8cbea043-fefc-4182-ba9e-fac5d23785d5",
+      "flow": "",
+      "packet_encoding": "",
+      "server": "118.163.101.44",
+      "server_port": 44332,
+      "tls": {
+        "enabled": true,
+        "server_name": "cf-bq5.pages.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "$public_key",
+          "short_id": "$short_id"
+        }
+      }
     },
     {
       "tag": "WARP+",
