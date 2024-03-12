@@ -104,9 +104,10 @@
         "direct",
         "WARP+",
         "sing-box-vless",
-        "HK-Google Cloud", 
+        "HK-Hong Kong Broadband Network", 
         "HK-Alibaba", 
-        "TW-Google Cloud", 
+        "HK-Krypt Technologies",
+        "TW-Chunghwa Telecom", 
         "DMIT-US", 
         "🇹🇼 Taiwan_hy_6",
         "🇫🇷 France_hy2_7",
@@ -365,9 +366,10 @@
       "outbounds": [
         "WARP+",
         "sing-box-vless",
-        "HK-Google Cloud", 
+        "HK-Hong Kong Broadband Network", 
         "HK-Alibaba", 
-        "TW-Google Cloud", 
+        "HK-Krypt Technologies",
+        "TW-Chunghwa Telecom", 
         "DMIT-US", 
         "🇹🇼 Taiwan_hy_6",
         "🇫🇷 France_hy2_7",
@@ -456,13 +458,16 @@
         "insecure": true
       }
     },
+
+
+
     
     
   {
-    "tag": "HK-Google Cloud",
+    "tag": "HK-Hong Kong Broadband Network",
     "type": "vmess",
-    "server": "34.96.169.1",
-    "server_port": 28817,
+    "server": "101.78.244.128",
+    "server_port": 12313,
     "uuid": "5840ab2d-ab59-4eb0-9dea-122d0fbbd2d9",
     "security": "auto",
     "alter_id": 0,
@@ -484,7 +489,7 @@
   {
     "tag": "HK-Alibaba",
     "type": "vmess",
-    "server": "8.217.221.165",
+    "server": "8.218.204.128",
     "server_port": 2083,
     "uuid": "5840ab2d-ab59-4eb0-9dea-122d0fbbd2d9",
     "security": "auto",
@@ -505,10 +510,33 @@
     "tcp_fast_open": true
   },
   {
-    "tag": "TW-Google Cloud",
+    "tag": "HK-Krypt Technologies",
     "type": "vmess",
-    "server": "34.80.100.64",
-    "server_port": 18443,
+    "server": "124.202.166.165",
+    "server_port": 443,
+    "uuid": "5840ab2d-ab59-4eb0-9dea-122d0fbbd2d9",
+    "security": "auto",
+    "alter_id": 0,
+    "tls": {
+      "enabled": true,
+      "server_name": "cfhk.393930.xyz",
+      "insecure": true
+    },
+    "udp_fragment": true,
+    "transport": {
+      "type": "ws",
+      "headers": {
+        "Host": "cfhk.393930.xyz"
+      },
+      "path": "/"
+    },
+    "tcp_fast_open": true
+  },
+  {
+    "tag": "TW-Chunghwa Telecom",
+    "type": "vmess",
+    "server": "203.66.14.48",
+    "server_port": 34237,
     "uuid": "5840ab2d-ab59-4eb0-9dea-122d0fbbd2d9",
     "security": "auto",
     "alter_id": 0,
@@ -549,6 +577,8 @@
     "tcp_fast_open": true
   }, 
   
+
+
   
    
     {
