@@ -105,6 +105,8 @@
       "outbounds": [
         "auto",
         "direct",
+        "WARP+",
+        "sing-box-vless",        
         "🇺🇸 United States_tuic_2",
         "🇹🇼 Taiwan_hy_6",
         "🇫🇷 France_hy2_7",
@@ -381,6 +383,8 @@
       "tag": "Others",
       "type": "selector",
       "outbounds": [
+        "WARP+",
+        "sing-box-vless",        
         "🇫🇷 France_hy2_7",
         "🇫🇷 France_hysteria_0",
         "🇫🇷 France_hysteria2_0",
@@ -394,6 +398,8 @@
       "tag": "auto",
       "type": "urltest",
       "outbounds": [
+        "WARP+",
+        "sing-box-vless",
         "🇺🇸 United States_tuic_2",
         "🇹🇼 Taiwan_hy_6",
         "🇫🇷 France_hy2_7",
@@ -426,6 +432,44 @@
       "type": "block",
       "tag": "block"
     },
+    {
+      "tag": "sing-box-vless",
+      "type": "vless",
+      "uuid": "8cbea043-fefc-4182-ba9e-fac5d23785d5",
+      "flow": "",
+      "packet_encoding": "",
+      "server": "8.218.188.129",
+      "server_port": 8443,
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "server_name": "cf-bq5.pages.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "random"
+          } 
+        }, 
+         "transport": {
+            "headers": {
+                 "Host": "cf-bq5.pages.dev"
+                 }, 
+                "type": "ws"
+        }
+    },
+    {
+      "tag": "WARP+",
+      "type": "wireguard",
+      "server": "162.159.195.8",
+      "server_port": 2408,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8f0a:fcdb:db2f:3b3:4d49/128"
+      ],
+      "private_key": "GAl2z55U2UzNU5FG+LW3kowK+BA/WGMi1dWYwx20pWk=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+      "reserved": "",
+      "mtu": 1408
+    },    
     {
       "tag": "🇺🇸 United States_tuic_2",
       "type": "tuic",
@@ -1091,7 +1135,7 @@
         "format": "binary",
         "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/category-ads-all.srs",
         "download_detour": "direct"
-      }
+      } 
     ]
   }
 }
