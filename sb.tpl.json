@@ -726,8 +726,8 @@
       {
        "tag": "geosite-wechat",
        "type": "remote",
-       "format": "binary",
-       "url": "https://testingcf.jsdelivr.net/gh/Toperlock/sing-box-geosite@main/rule/WeChat.srs",
+       "format": "source",
+       "url": "https://testingcf.jsdelivr.net/gh/Toperlock/sing-box-geosite@main/rule/WeChat.json",
        "download_detour": "direct"
       },
       {
