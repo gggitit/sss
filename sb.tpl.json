@@ -393,6 +393,27 @@
       "default": "proxy"
     },
     {
+      "tag": "Wechat",
+      "type": "selector",
+      "outbounds": [
+        "proxy",
+        "direct",
+        "hk",
+        "hk-auto",
+        "tw",
+        "tw-auto",
+        "jp",
+        "jp-auto",
+        "sg",
+        "sg-auto",
+        "us",
+        "us-auto",
+        "all",
+        "all-auto"
+      ],
+      "default": "direct"
+    },    
+    {
       "tag": "China",
       "type": "selector",
       "outbounds": [
@@ -592,6 +613,10 @@
           "d.metacubex.one"
         ],
         "outbound": "direct"
+      },
+      {
+        "rule_set": "geosite-wechat",
+        "outbound": "Wechat"
       },
       {
         "rule_set": "geosite-openai",
