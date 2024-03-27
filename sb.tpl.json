@@ -183,7 +183,7 @@
       "default": "proxy"
     },
     {
-      "tag": "Fackbook",
+      "tag": "Facebook",
       "type": "selector",
       "outbounds": [
         "proxy",
