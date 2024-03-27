@@ -727,7 +727,7 @@
        "tag": "geosite-wechat",
        "type": "remote",
        "format": "source",
-       "url": "https://testingcf.jsdelivr.net/gh/Toperlock/sing-box-geosite@main/rule/WeChat.json",
+       "url": "https://testingcf.jsdelivr.net/gh/gggitit/sing-box-geosite@main/rule/WeChat.json",
        "download_detour": "direct"
       },
       {
