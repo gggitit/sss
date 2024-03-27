@@ -393,7 +393,7 @@
       "default": "proxy"
     },
     {
-      "tag": "cn",
+      "tag": "China",
       "type": "selector",
       "outbounds": [
         "proxy",
@@ -540,7 +540,7 @@
         "all",
         "all-auto"
       ],
-      "default": "direct"
+      "default": "proxy"
     },
     {
       "type": "direct",
