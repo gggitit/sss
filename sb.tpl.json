@@ -309,6 +309,15 @@
       "default": "direct"
     },
     {
+      "tag": "AdBlock",
+      "type": "selector",
+      "outbounds": [
+        "block",
+        "direct"
+      ],
+      "default": "block"
+    },
+    {
       "tag": "final",
       "type": "selector",
       "outbounds": [
@@ -458,6 +467,10 @@
         "port": 443,
         "outbound": "block"
       },
+      {
+        "rule_set": "geosite-category-ads-all",
+        "outbound": "AdBlock"
+      },      
       {
         "clash_mode": "direct",
         "outbound": "direct"
