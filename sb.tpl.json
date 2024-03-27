@@ -393,7 +393,7 @@
       "default": "proxy"
     },
     {
-      "tag": "Wechat",
+      "tag": "WeChat",
       "type": "selector",
       "outbounds": [
         "proxy",
@@ -616,7 +616,7 @@
       },
       {
         "rule_set": "geosite-wechat",
-        "outbound": "Wechat"
+        "outbound": "WeChat"
       },
       {
         "rule_set": "geosite-openai",
@@ -726,8 +726,8 @@
       {
        "tag": "geosite-wechat",
        "type": "remote",
-       "format": "source",
-       "url": "https://raw.githubusercontent.com/Toperlock/sing-box-geosite/main/rule/WeChat.json",
+       "format": "binary",
+       "url": "https://github.com/Toperlock/sing-box-geosite/raw/main/rule/WeChat.srs",
        "download_detour": "proxy"
       },
       {
