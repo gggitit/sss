@@ -649,7 +649,7 @@
         "outbound": "Bilibili"
       },
       {
-        "rule_set": "geosite-Bahamut",
+        "rule_set": "geosite-bahamut",
         "outbound": "Bahamut"
       },
       {
