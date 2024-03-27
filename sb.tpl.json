@@ -459,10 +459,6 @@
         "outbound": "block"
       },
       {
-        "rule_set": "geosite-category-ads-all",
-        "outbound": "AdBlock"
-      },
-      {
         "clash_mode": "direct",
         "outbound": "direct"
       },
