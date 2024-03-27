@@ -162,6 +162,27 @@
       "default": "direct"
     },
     {
+      "tag": "Twitter",
+      "type": "selector",
+      "outbounds": [
+        "proxy",
+        "direct",
+        "hk",
+        "hk-auto",
+        "tw",
+        "tw-auto",
+        "jp",
+        "jp-auto",
+        "sg",
+        "sg-auto",
+        "us",
+        "us-auto",
+        "all",
+        "all-auto"
+      ],
+      "default": "proxy"
+    },    
+    {
       "tag": "Telegram",
       "type": "selector",
       "outbounds": [
