@@ -522,7 +522,7 @@
       "tolerance": 50
     },
     {
-      "tag": "GLOBAL",
+      "tag": "Global",
       "type": "selector",
       "outbounds": [
         "direct",
