@@ -727,8 +727,8 @@
        "tag": "geosite-wechat",
        "type": "remote",
        "format": "binary",
-       "url": "https://github.com/Toperlock/sing-box-geosite/raw/main/rule/WeChat.srs",
-       "download_detour": "proxy"
+       "url": "https://testingcf.jsdelivr.net/gh/Toperlock/sing-box-geosite@main/rule/WeChat.srs",
+       "download_detour": "direct"
       },
       {
         "tag": "geoip-google",
